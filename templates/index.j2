@@ -5,8 +5,8 @@
 <body>
 <p> Mi nombre es {{ ansible_fqdn }}
 <p> La distribucion es {{ ansible_distribution }} version {{ ansible_distribution_version }}
-<p> La fecha de hiy es {{ ansible_date_time}}
-<p> Mi IPV4 es {{ ansible_all_ipv4_addresses[0] }}
+<p> La fecha de hiy es {{ ansible_date_time.date }}
+<p> Mi IPV4 es {{ ansible_all_ipv4_addresses[1] }}
 <p> El autor es {{ AUTOR }}
 <p> Mi grupo musical favorito es {{ GRUPO_MUSICAL }}
 </body>
