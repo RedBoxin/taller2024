@@ -2,7 +2,8 @@
 - hosts: rocky 
   user: sysadmin
   become: true
-
+  vars_files: 
+  - ./vars/personal.yml
   tasks:
 
   - name: Tener instalado el servidor apache 
@@ -29,7 +30,7 @@
   
   - name: Instalar index.html costunizado con un tamplate
     ansible.builtin.template:
-      src: ./templates/indesx.j2
+      src: ./templates/index.j2
       dest: /var/www/html/index.html
       mode: '0444'
       owner: apache
